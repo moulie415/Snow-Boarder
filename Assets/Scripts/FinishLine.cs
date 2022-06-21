@@ -11,7 +11,9 @@ public class FinishLine : MonoBehaviour
         if (collision.tag == "Player")
         {
             finishEffect.Play();
+            GetComponent<AudioSource>().Play();
             Invoke("ReloadScene", reloadDelay);
+            
             
         }
 
